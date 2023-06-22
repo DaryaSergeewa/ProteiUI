@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class protei {
+public class Protei {
 
     @BeforeEach
     public void Setup() {
