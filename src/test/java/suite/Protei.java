@@ -19,7 +19,7 @@ public class Protei {
     public void Setup() {
         WebDriverManager.chromedriver().setup();
         Selenide.open("http://185.67.95.60/");
-        Assertions.assertDoesNotThrow(()->$(".uk-legend")
+        Assertions.assertDoesNotThrow(() -> $(".uk-legend")
                         .shouldHave(Condition.text("Привет с демо-сайта для автотестов!")).shouldBe(Condition.visible),
                 "Страница демо-сайта не открыта");
     }
@@ -32,7 +32,7 @@ public class Protei {
         String login = "student@protei.ru",
                 passwd = "student";
 
-        new PassedAutorization().passedAutorization(login,passwd);
+        new PassedAutorization().passedAutorization(login, passwd);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class Protei {
         String login = "student@protei.ru",
                 passwd = "student";
 
-        new AddUser(login,passwd).addUser();
+        new AddUser(login, passwd).addUser();
     }
 
     @ParameterizedTest(name = "T3.{index}. Неверные данные для авторизации")
