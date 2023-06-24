@@ -41,9 +41,12 @@ public class Protei {
     public void AddUser() {
 
         String login = "student@protei.ru",
-                passwd = "student";
+                passwd = "student",
+                newlogin = "newstudent@.protei.ru",
+                newpasswd = "12345",
+                name = "newstudent";
 
-        new AddUser(login, passwd).addUser();
+        new AddUser(login, passwd).addUser(newlogin, newpasswd, name);
     }
 
     @ParameterizedTest(name = "T3.{index}. Неверные данные для авторизации")

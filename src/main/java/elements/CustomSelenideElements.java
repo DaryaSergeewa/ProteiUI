@@ -5,6 +5,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.impl.ElementFinder;
 import com.codeborne.selenide.impl.WebElementSource;
 import elements.interfaces.Button;
+import elements.interfaces.Table;
 import elements.interfaces.TextField;
 import org.openqa.selenium.By;
 
@@ -39,6 +40,18 @@ public abstract class CustomSelenideElements {
                 Button.class,
                 (WebElementSource) parent,
                 By.xpath(".//*[contains(@class,'uk-button uk-button-primary') and text()='" + name + "']"),
+                index);
+    }
+
+    public static Table $table() {
+        return $table(null, 0);
+    }
+
+    public static Table $table(SelenideElement parent, int index) {
+        return ElementFinder.wrap(WebDriverRunner.driver(),
+                Table.class,
+                (WebElementSource) parent,
+                By.xpath(".//table[@class='uk-table uk-table-striped']"),
                 index);
     }
 }
