@@ -4,7 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import elements.CustomSelenideElements;
 
-public class AutorizationWindow {
+public class Autorization {
     public void autorization(String login_name, String passwd_name) {
 
         SelenideElement login = CustomSelenideElements.$textField("E-Mail:");
